@@ -15,6 +15,7 @@ const (
 	// CommonSuccess common
 	CommonSuccess      = 0
 	CommonErrServerErr = 1000
+	parameterErr       = 1002
 	ParameterEmptyErr  = 1001
 
 	TokenErr = 1102 //token error

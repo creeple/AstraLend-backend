@@ -4,3 +4,10 @@
 {"level":"info","time":"2025-03-19T21:31:28.527+0800","line":"D:/github projects/AstraLend-backend/api/models/request/login.go:48","msg":"start login : &{admin d}","serviceName":"pledge"}
 {"level":"info","time":"2025-03-19T21:32:05.314+0800","line":"D:/github projects/AstraLend-backend/api/models/request/login.go:48","msg":"start login : &{admin d}","serviceName":"pledge"}
 {"level":"info","time":"2025-03-19T21:34:35.765+0800","line":"D:/github projects/AstraLend-backend/api/models/request/login.go:48","msg":"start login : &{admin d}","serviceName":"pledge"}
+{"level":"info","time":"2025-03-20T16:08:52.082+0800","line":"D:/github projects/AstraLend-backend/api/models/request/login.go:48","msg":"start login : &{ }","serviceName":"pledge"}
+{"level":"info","time":"2025-03-20T16:09:34.725+0800","line":"D:/github projects/AstraLend-backend/api/models/request/login.go:48","msg":"start login : &{ }","serviceName":"pledge"}
+{"level":"info","time":"2025-03-20T16:10:39.787+0800","line":"D:/github projects/AstraLend-backend/api/models/request/login.go:48","msg":"start login : &{ }","serviceName":"pledge"}
+{"level":"info","time":"2025-03-20T16:13:49.653+0800","line":"D:/github projects/AstraLend-backend/api/models/request/login.go:48","msg":"start login : &{ }","serviceName":"pledge"}
+{"level":"info","time":"2025-03-20T16:23:20.493+0800","line":"D:/github projects/AstraLend-backend/api/models/request/login.go:48","msg":"start login : &{ }","serviceName":"pledge"}
+{"level":"info","time":"2025-03-20T20:15:28.970+0800","line":"D:/github projects/AstraLend-backend/db/mysql.go:23","msg":"init mysql","serviceName":"pledge"}
+{"level":"info","time":"2025-03-20T21:08:00.480+0800","line":"D:/github projects/AstraLend-backend/db/mysql.go:23","msg":"init mysql","serviceName":"astraLend"}

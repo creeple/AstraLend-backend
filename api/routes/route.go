@@ -12,7 +12,10 @@ import (
 )
 
 func InitRoute(e *gin.Engine) {
-	group := e.Group("/api")
+	groupUser := e.Group("/api/user")
 	user := controller.User{}
-	group.POST("/login", user.Login)
+	groupUser.POST("/login", user.Login)
+	groupPool := e.Group("/api/pool")
+	pool := controller.Astra{}
+	groupPool.POST("/poolBaseInfo", pool.GetPoolBaseInfo)
 }

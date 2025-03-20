@@ -9,6 +9,8 @@ package main
 import (
 	"AstraLend-backend/api/routes"
 	"AstraLend-backend/config"
+	"AstraLend-backend/db"
+	"AstraLend-backend/utils"
 	"fmt"
 	"github.com/gin-gonic/gin"
 )
@@ -16,6 +18,8 @@ import (
 func main() {
 	address := config.Config.Mysql.Address
 	fmt.Println(address)
+	utils.InitTranslator()
+	db.InitMysql()
 	gin.SetMode(gin.ReleaseMode)
 	app := gin.Default()
 	routes.InitRoute(app)

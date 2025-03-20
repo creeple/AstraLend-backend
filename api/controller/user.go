@@ -10,6 +10,7 @@ import (
 	"AstraLend-backend/api/constant"
 	"AstraLend-backend/api/models/request"
 	"AstraLend-backend/api/models/response"
+	"AstraLend-backend/utils"
 	"fmt"
 	"github.com/gin-gonic/gin"
 )
@@ -21,9 +22,10 @@ func (t *User) Login(ctx *gin.Context) {
 	req := request.LoginRequest{}
 	res := response.Token{}
 	//请求参数封装+参数校验
-	validateCode := req.ValidateLogin(ctx, &req)
+	//此处校验时应该传指针变量，因为传参
+	validateCode, data := utils.CommonValidator(ctx, &req)
 	if validateCode != constant.CommonSuccess {
-		response.Response(ctx, validateCode, nil)
+		response.Response(ctx, validateCode, data)
 		return
 	}
 	//请求登录接口
