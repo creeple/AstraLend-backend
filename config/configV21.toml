@@ -1,10 +1,10 @@
 [mysql]
   # address = "50.18.79.42"
   address = "localhost"
-  port = "33009"
-  db_name = "pledge_v21"
-  user_name = "pledge_v21"
-  password = "pledge_v21"
+  port = "3306"
+  db_name = "astra_lend"
+  user_name = "root"
+  password = "123456"
   max_open_conns = 0
   max_idle_conns = 0
   max_life_time = 0
@@ -16,9 +16,9 @@
   db = 1
   user_name = ""
   password = "pledger_web3"
-  max_idle = 0
+  max_idle = 10
   max_active = 0
-  idle_timeout = 0
+  idle_timeout = 180
   
   #[testnet]
   #chain_id = "11155111"
