@@ -27,23 +27,28 @@ type PoolBaseInfo struct {
 
 // PoolBases is a struct that represents the poolbases table in the database
 type PoolBases struct {
-	Id                     int    `json:"id" gorm:"column:id;primaryKey"`
-	PoolID                 int    `json:"pool_id" gorm:"column:pool_id;"`
-	AutoLiquidateThreshold string `json:"autoLiquidateThreshold" gorm:"column:auto_liquidata_threshold;"`
-	BorrowSupply           string `json:"borrowSupply" gorm:"column:borrow_supply;"`
-	BorrowToken            string `json:"borrowToken" gorm:"column:pool_id;"`
-	BorrowTokenInfo        string `json:"borrowTokenInfo" gorm:"column:borrow_token_info;"`
-	EndTime                string `json:"endTime" gorm:"end_time;"`
-	InterestRate           string `json:"interestRate" gorm:"column:interest_rate;"`
-	JpCoin                 string `json:"jpCoin" gorm:"column:jp_coin;"`
-	LendSupply             string `json:"lendSupply" gorm:"column:lend_supply;"`
-	LendToken              string `json:"lendToken" gorm:"column:lend_token;"`
-	LendTokenInfo          string `json:"lendTokenInfo" gorm:"column:lend_token_info;"`
-	MartgageRate           string `json:"martgageRate" gorm:"column:martgage_rate;"`
-	MaxSupply              string `json:"maxSupply" gorm:"column:max_supply;"`
-	SettleTime             string `json:"settleTime" gorm:"column:settle_time;"`
-	SpCoin                 string `json:"spCoin" gorm:"column:sp_coin;"`
-	State                  string `json:"state" gorm:"column:state;"`
+	Id                     int    `json:"-" gorm:"column:id;primaryKey;autoIncrement"`
+	PoolId                 int    `json:"pool_id" gorm:"column:pool_id"`
+	ChainId                string `json:"chain_id" gorm:"column:chain_id"`
+	SettleTime             string `json:"settle_time" gorm:"column:settle_time"`
+	EndTime                string `json:"end_time" gorm:"column:end_time"`
+	InterestRate           string `json:"interest_rate" gorm:"column:interest_rate"`
+	MaxSupply              string `json:"max_supply" gorm:"max_supply:"`
+	LendSupply             string `json:"lend_supply" gorm:"column:lend_supply"`
+	BorrowSupply           string `json:"borrow_supply" gorm:"column:borrow_supply"`
+	MartgageRate           string `json:"martgage_rate" gorm:"column:martgage_rate"`
+	LendToken              string `json:"lend_token" gorm:"column:lend_token"`
+	LendTokenInfo          string `json:"lend_token_info" gorm:"column:lend_token_info"`
+	BorrowToken            string `json:"borrow_token" gorm:"column:borrow_token"`
+	BorrowTokenInfo        string `json:"borrow_token_info" gorm:"column:borrow_token_info"`
+	State                  string `json:"state" gorm:"column:state"`
+	SpCoin                 string `json:"sp_coin" gorm:"column:sp_coin"`
+	JpCoin                 string `json:"jp_coin" gorm:"column:jp_coin"`
+	LendTokenSymbol        string `json:"lend_token_symbol" gorm:"column:lend_token_symbol"`
+	BorrowTokenSymbol      string `json:"borrow_token_symbol" gorm:"column:borrow_token_symbol"`
+	AutoLiquidateThreshold string `json:"auto_liquidate_threshold" gorm:"column:auto_liquidate_threshold"`
+	CreatedAt              string `json:"created_at" gorm:"column:created_at"`
+	UpdatedAt              string `json:"updated_at" gorm:"column:updated_at"`
 }
 
 // BorrowTokenInfo 解析borrowTokenInfo字段

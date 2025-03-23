@@ -70,3 +70,16 @@ func RedisSet(key string, data interface{}, aliveSecond int) error {
 	}
 	return nil
 }
+
+// RedisGet 获取Key
+func RedisGet(key string) ([]byte, error) {
+	conn := RedisConn.Get()
+	defer func() {
+		_ = conn.Close()
+	}()
+	reply, err := redis.Bytes(conn.Do("get", key))
+	if err != nil {
+		return nil, err
+	}
+	return reply, nil
+}

@@ -48,3 +48,5 @@ func GetPoolBaseInfoByChainId(chainId int, poolBaseInfos *[]models.PoolBaseInfo)
 	}
 	return constant.CommonSuccess, nil
 }
+func SavePoolBaseInfo(poolBase *models.PoolBases) {
+}
